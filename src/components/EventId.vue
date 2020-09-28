@@ -3,6 +3,7 @@
     <div class="date">{{ date }}</div>
     <div class="time">{{ time }}</div>
     <div class="name">{{ name }}</div>
+    <div class="info">{{ info }}</div>
   </div>
 </template>
 
@@ -12,13 +13,13 @@ export default {
     date: String,
     time: Number,
     name: String,
+    info: String,
   },
 };
 </script>
 
 <style>
 .eventId-container {
-  background-color: green;
-  width: 20px;
+  width: 120px;
 }
 </style>
