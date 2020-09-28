@@ -1,6 +1,7 @@
 <template>
-  <div class="eventsContainer">
-    <div>
+  <div class="events">
+    <h3 class="event-text">Upcoming events:</h3>
+    <div class="eventsContainer">
       <EventId
         class="EventId"
         @click.native="$router.push('/eventPage' + event.id)"
@@ -27,4 +28,15 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+.eventsContainer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 10px;
+  margin: 10px;
+}
+
+.event-text {
+  color: white;
+}
+</style>

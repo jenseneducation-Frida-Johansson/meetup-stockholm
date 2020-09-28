@@ -3,7 +3,7 @@
     <div class="date">{{ date }}</div>
     <div class="time">{{ time }}</div>
     <div class="name">{{ name }}</div>
-    <div class="info">{{ info }}</div>
+    <!-- <div class="info">{{ info }}</div> -->
   </div>
 </template>
 
@@ -20,6 +20,11 @@ export default {
 
 <style>
 .eventId-container {
-  width: 120px;
+  width: 110px;
+  height: 110px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 50%;
+  margin-left: 5px;
 }
 </style>

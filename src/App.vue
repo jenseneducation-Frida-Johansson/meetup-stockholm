@@ -1,18 +1,21 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link>
+      <router-link to="/">Stockholm meetup</router-link>
     </div>
     <router-view />
   </div>
 </template>
 
-<style>
+<style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
+  background-image: url("~@/assets/people-2567915_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: center top;
+  padding-bottom: 50px;
 }
 
 #nav {
@@ -21,6 +24,8 @@
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  font-size: 30px;
+  color: orange;
+  text-decoration: none;
 }
 </style>
