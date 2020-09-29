@@ -3,7 +3,7 @@
     <div class="date">{{ date }}</div>
     <div class="time">{{ time }}</div>
     <div class="name">{{ name }}</div>
-    <!-- <div class="info">{{ info }}</div> -->
+    <div class="info">{{ info }}</div>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
 export default {
   props: {
     date: String,
-    time: Number,
+    time: String,
     name: String,
     info: String,
   },

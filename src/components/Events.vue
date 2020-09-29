@@ -1,10 +1,8 @@
 <template>
   <div class="events">
-    <h3 class="event-text">Upcoming events:</h3>
     <div class="eventsContainer">
       <EventId
         class="EventId"
-        @click.native="$router.push('/eventPage' + event.id)"
         v-for="event in listOfEvents"
         :key="event.id"
         :date="event.date"
