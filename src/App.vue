@@ -27,5 +27,6 @@
   font-size: 30px;
   color: orange;
   text-decoration: none;
+  text-shadow: 2px 2px 5px grey;
 }
 </style>

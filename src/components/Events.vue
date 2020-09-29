@@ -1,14 +1,15 @@
 <template>
   <div class="events">
+    <div class="event-text">Upcoming events:</div>
     <div class="eventsContainer">
       <EventId
-        class="EventId"
+        @click.native="$router.push('/eventPage/' + event.id)"
         v-for="event in listOfEvents"
         :key="event.id"
+        :class="'event-' + event.id"
         :date="event.date"
         :time="event.time"
         :name="event.name"
-        :info="event.info"
       />
     </div>
   </div>
@@ -30,11 +31,16 @@ export default {
 .eventsContainer {
   display: grid;
   grid-template-columns: auto auto;
-  grid-gap: 10px;
+  grid-gap: 15px;
   margin: 10px;
 }
 
+.EventId:hover {
+  background-color: grey;
+}
 .event-text {
   color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 3px grey;
 }
 </style>

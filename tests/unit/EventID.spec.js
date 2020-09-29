@@ -14,7 +14,7 @@ it("should render the right date for the event in the EventID component", () => 
 it("should render the right time for the event in the EventID  component", () => {
   const wrapper = shallowMount(EventId, {
     propsData: {
-      time: 19,
+      time: "19",
     },
   });
   let actual = wrapper.find(".time").text();

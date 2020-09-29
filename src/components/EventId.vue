@@ -26,5 +26,11 @@ export default {
   padding: 20px;
   border-radius: 50%;
   margin-left: 5px;
+  color: grey;
+}
+
+.date,
+.time {
+  color: orange;
 }
 </style>
