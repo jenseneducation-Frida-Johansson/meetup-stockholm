@@ -1,5 +1,6 @@
 import Home from "../views/Home.vue";
 import EventPage from "../views/EventPage.vue";
+import AttendEvent from "../views/AttendEvent.vue";
 
 const routes = [
   {
@@ -11,6 +12,11 @@ const routes = [
     path: "/eventPage/:id",
     name: "EventPage",
     component: EventPage,
+  },
+  {
+    path: "/attendEvent/:id",
+    name: "AttendEvent",
+    component: AttendEvent,
   },
 ];
 
