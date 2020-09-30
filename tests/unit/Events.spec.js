@@ -40,11 +40,11 @@ it("should show all the events in the events component", () => {
 
   const wrapper = shallowMount(Events, {
     propsData: {
-      listOfEventss: listOfEvents,
+      listOfEvents: listOfEvents,
     },
   });
 
   let expected = listOfEvents.length;
-  let actual = wrapper.find("eventsContainer").findComponent(EventId).length;
+  let actual = wrapper.find(".events").findAllComponents(EventId).length;
   expect(actual).toBe(expected);
 });
