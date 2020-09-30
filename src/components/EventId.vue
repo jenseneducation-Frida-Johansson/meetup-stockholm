@@ -1,5 +1,6 @@
 <template>
   <div class="eventId-container">
+    <img class="image" :src="image" alt="" />
     <div class="date">{{ date }}</div>
     <div class="time">{{ time }}</div>
     <div class="name">{{ name }}</div>
@@ -10,6 +11,7 @@
 <script>
 export default {
   props: {
+    image: String,
     date: String,
     time: String,
     name: String,

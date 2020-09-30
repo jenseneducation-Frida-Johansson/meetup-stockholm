@@ -1,17 +1,8 @@
-const {
-  shallowMount,
-  RouterLinkStub,
-  createLocalVue,
-} = require("@vue/test-utils");
-import VueRouter from "vue-router";
-import routes from "@/router/default.routes.js";
+const { shallowMount } = require("@vue/test-utils");
 import Events from "@/components/Events.vue";
 import EventId from "@/components/EventId.vue";
-import EventPage from "@/views/EventPage.vue";
-import Home from "@/views/Home.vue";
-import store from "../../src/store";
 
-it("should show all the events in the event component", () => {
+it("should show all the events in the events component", () => {
   const listOfEvents = [
     {
       id: 1,
@@ -49,12 +40,11 @@ it("should show all the events in the event component", () => {
 
   const wrapper = shallowMount(Events, {
     propsData: {
-      listOfEvents: listOfEvents,
+      listOfEventss: listOfEvents,
     },
   });
 
   let expected = listOfEvents.length;
-  let actual = wrapper.find(".eventsContainer").findAllComponents(EventId)
-    .length;
+  let actual = wrapper.find("eventsContainer").findComponent(EventId).length;
   expect(actual).toBe(expected);
 });

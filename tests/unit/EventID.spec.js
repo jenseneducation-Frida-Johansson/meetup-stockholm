@@ -21,7 +21,7 @@ it("should render the right time for the event in the EventID  component", () =>
   expect(actual).toBe("19");
 });
 
-it("should show render right event-name in the EventID component", () => {
+it("should show render the right event-name in the EventID component", () => {
   const wrapper = shallowMount(EventId, {
     propsData: {
       name: "Frontend-developer meet",
@@ -31,7 +31,7 @@ it("should show render right event-name in the EventID component", () => {
   expect(actual).toBe("Frontend-developer meet");
 });
 
-it("should render information about event in in the EventId component", () => {
+it("should render the right information about event in in the EventId component", () => {
   const wrapper = shallowMount(EventId, {
     propsData: {
       info: "blablabla",
@@ -39,4 +39,14 @@ it("should render information about event in in the EventId component", () => {
   });
   let actual = wrapper.find(".info").text();
   expect(actual).toBe("blablabla");
+});
+
+it("should render the image url for event in the EventId component", () => {
+  const wrapper = shallowMount(EventId, {
+    propsData: {
+      image: "../assets/startup-593341_1920.jpg",
+    },
+  });
+  let actual = wrapper.find(".image").attributes("src");
+  expect(actual).toBe("../assets/startup-593341_1920.jpg");
 });

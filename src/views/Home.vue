@@ -19,5 +19,12 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
+.home {
+  background-image: url("~@/assets/people-2567915_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: 800px;
+  background-position: center top;
+  padding-bottom: 50px;
+}
 </style>
