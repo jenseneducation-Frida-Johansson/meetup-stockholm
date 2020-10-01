@@ -1,39 +1,20 @@
-import { shallowMount, createLocalVue } from "@vue/test-utils";
-import VueRouter from "vue-router";
-import routes from "@/router/default.routes.js";
+const { shallowMount, createLocalVue } = require("@vue/test-utils");
 import AttendForm from "@/components/AttendForm.vue";
 import EventPage from "@/views/EventPage.vue";
+import store from "@/store/index.js";
 
-it("should show attendEvent-form in EventPage-view", () => {
+it("should show the AttendForm-component in EventPage-view", () => {
   const localVue = createLocalVue();
-  const router = new VueRouter({ routes });
-  localVue.use(VueRouter);
-
   const $route = {
-    path: "/eventPage/1",
+    params: { id: 1 },
   };
   const wrapper = shallowMount(EventPage, {
     localVue,
-    router,
     mocks: {
-      $store: {
-        getters: {
-          event() {
-            return {
-              id: 1,
-              date: "FRI, OCT 2",
-              time: "19",
-              name: "Frontend-developer meet",
-              info:
-                "Come and meet other Frontend-developers and get som inspiration from your fellow 'co-workers' or students. ",
-              image: "startup-593341_1920.jpg",
-            };
-          },
-        },
-      },
+      $route,
     },
+    store,
   });
-
-  let actual = wrapper.findComponent(AttendForm).exists();
+  const actual = wrapper.findComponent(AttendForm).exists();
   expect(actual).toBe(true);
 });

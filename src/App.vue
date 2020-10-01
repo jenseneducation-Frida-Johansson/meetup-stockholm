@@ -24,5 +24,9 @@
   color: orange;
   text-decoration: none;
   text-shadow: 1px 1px 4px rgb(185, 185, 185);
+  position: fixed;
+  top: 0;
+  display: flex;
+  padding: 20px;
 }
 </style>

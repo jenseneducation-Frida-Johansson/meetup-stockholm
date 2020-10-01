@@ -26,7 +26,7 @@ h5 {
 }
 
 .email {
-  margin: 20px 0px 20px 0px;
+  margin: 26px 0px 20px 0px;
 }
 
 .submit {
@@ -34,5 +34,6 @@ h5 {
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
+  margin-bottom: 100px;
 }
 </style>
