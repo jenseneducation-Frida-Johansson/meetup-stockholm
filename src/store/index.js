@@ -1,5 +1,7 @@
 import Vue from "vue";
 import Vuex from "vuex";
+// import axios from "axios";
+// import router from "@/router/index.js";
 
 Vue.use(Vuex);
 
@@ -43,7 +45,10 @@ export default new Vuex.Store({
         image: "@/assets/startup-593341_1920.jpg",
       },
     ],
+    myEvents: [],
+    signUpEvents: [],
   },
+
   getters: {
     listOfEvents(state) {
       return state.listOfEvents;

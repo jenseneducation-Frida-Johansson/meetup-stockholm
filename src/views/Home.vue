@@ -1,10 +1,12 @@
 <template>
   <div class="home">
     <Events :listOfEvents="listOfEvents" />
+    <Nav />
   </div>
 </template>
 
 <script>
+import Nav from "@/components/Nav.vue";
 import Events from "@/components/Events.vue";
 import { mapGetters } from "vuex";
 
@@ -12,6 +14,7 @@ export default {
   name: "Home",
   components: {
     Events,
+    Nav,
   },
   computed: {
     ...mapGetters(["listOfEvents"]),

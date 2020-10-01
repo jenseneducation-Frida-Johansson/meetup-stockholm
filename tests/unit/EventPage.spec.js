@@ -1,10 +1,10 @@
 import { shallowMount, createLocalVue } from "@vue/test-utils";
-import EventPage from "@/views/EventPage";
 import VueRouter from "vue-router";
 import routes from "@/router/default.routes.js";
-import AttendButton from "@/components/AttendButton.vue";
+import AttendForm from "@/components/AttendForm.vue";
+import EventPage from "@/views/EventPage.vue";
 
-it("should show the AttendEvent-button in EventPage-view", () => {
+it("should show attendEvent-form in EventPage-view", () => {
   const localVue = createLocalVue();
   const router = new VueRouter({ routes });
   localVue.use(VueRouter);
@@ -34,6 +34,6 @@ it("should show the AttendEvent-button in EventPage-view", () => {
     },
   });
 
-  let actual = wrapper.findComponent(AttendButton).exists();
+  let actual = wrapper.findComponent(AttendForm).exists();
   expect(actual).toBe(true);
 });

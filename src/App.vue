@@ -7,6 +7,7 @@
   </div>
 </template>
 
+
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -22,6 +23,6 @@
   font-size: 30px;
   color: orange;
   text-decoration: none;
-  text-shadow: 2px 2px 5px grey;
+  text-shadow: 1px 1px 4px rgb(185, 185, 185);
 }
 </style>

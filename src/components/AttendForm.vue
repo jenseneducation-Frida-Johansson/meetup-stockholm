@@ -1,32 +1,38 @@
 <template>
-  <div class="addEvent">
-    <!-- <img class="image" :src="event.image" alt="" /> -->
-    <h2 class="date time">{{ event.date }}, {{ event.time }}</h2>
-    <h3>{{ event.name }}</h3>
-    <div class="form">
-      <input class="Name" type="text" placeholder="Name " maxlength="30" />
-      <input class="E-mail" type="text" placeholder="E-mail" maxlength="30" />
-    </div>
+  <div>
+    <h5>Fill in information to attend avent!</h5>
+    <section class="form-container">
+      <input class="formName" type="text" placeholder="Name" />
+      <input class="email" type="email" placeholder="E-mail" />
+      <button type="submit" class="submit">Attend Event</button>
+    </section>
   </div>
 </template>
 
 <script>
-export default {
-  created() {
-    this.event = this.$store.getters.event(this.$route.params.id);
-  },
-};
+export default {};
 </script>
 
 <style>
-.form {
+.form-container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 40px;
+  margin-top: 30px;
 }
-.E-mail {
-  margin: 20px 0px 20px 00px;
+h5 {
+  margin-top: 50px;
+}
+
+.email {
+  margin: 20px 0px 20px 0px;
+}
+
+.submit {
+  background-color: #65b2b7;
+  color: white;
+  border: none;
+  padding: 10px 20px 10px 20px;
 }
 </style>
