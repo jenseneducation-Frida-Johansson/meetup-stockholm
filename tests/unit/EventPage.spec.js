@@ -10,10 +10,10 @@ it("should show the AttendForm-component in EventPage-view", () => {
   };
   const wrapper = shallowMount(EventPage, {
     localVue,
+    store,
     mocks: {
       $route,
     },
-    store,
   });
   const actual = wrapper.findComponent(AttendForm).exists();
   expect(actual).toBe(true);

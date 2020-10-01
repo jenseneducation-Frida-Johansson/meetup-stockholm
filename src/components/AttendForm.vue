@@ -1,16 +1,32 @@
 <template>
   <div>
-    <h5>Fill in information to attend avent!</h5>
-    <section class="form-container">
-      <input class="formName" type="text" placeholder="Name" />
-      <input class="email" type="email" placeholder="E-mail" />
-      <button type="submit" class="submit">Attend Event</button>
-    </section>
+    <form class="form-container" @submit.prevent="handleSubmit">
+      <input v-model="username" placeholder="Name" data-username />
+      <input v-model="email" placeholder="E-mail" class="email" />
+      <input type="submit" value="Attend Event" class="submitButton" />
+    </form>
+
+    <div class="message" v-if="submitted">
+      Du är nu anmäld till Eventet {{ username }}!
+    </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      username: "",
+      email: "",
+      submitted: false,
+    };
+  },
+  methods: {
+    handleSubmit() {
+      this.submitted = true;
+    },
+  },
+};
 </script>
 
 <style>
@@ -29,11 +45,11 @@ h5 {
   margin: 26px 0px 20px 0px;
 }
 
-.submit {
+.submitButton {
   background-color: #65b2b7;
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
 }
 </style>
