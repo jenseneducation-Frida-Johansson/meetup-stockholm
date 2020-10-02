@@ -45,16 +45,28 @@ export default new Vuex.Store({
         image: "@/assets/startup-593341_1920.jpg",
       },
     ],
-    myEvents: [],
-    signUpEvents: [],
+    myAttendedEvents: [],
+    addEvent: [],
   },
-
   getters: {
     listOfEvents(state) {
       return state.listOfEvents;
     },
     event: (state) => (id) => {
       return state.listOfEvents.find((event) => event.id == id);
+    },
+    myAttendedEvents(state) {
+      return state.myAttendedEvents;
+    },
+  },
+  mutations: {
+    addEvent(state, data) {
+      state.myAttendedEvents.push(data);
+    },
+  },
+  actions: {
+    addEvent({ commit }, data) {
+      commit("addEvent", data);
     },
   },
 });

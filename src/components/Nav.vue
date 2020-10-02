@@ -1,6 +1,6 @@
 <template>
   <div class="nav-container">
-    <router-link to="/myEvents/:id">My Events</router-link>
+    <router-link to="/myEvents">My Events</router-link>
   </div>
 </template>
 

@@ -1,18 +1,34 @@
 <template>
   <div>
     <form class="form-container" @submit.prevent="handleSubmit">
-      <input v-model="username" placeholder="Name" data-username />
-      <input v-model="email" placeholder="E-mail" class="email" />
-      <input type="submit" value="Attend Event" class="submitButton" />
+      <input
+        v-model="username"
+        placeholder="Name"
+        data-username
+        maxlength="35"
+      />
+      <input
+        v-model="email"
+        placeholder="E-mail"
+        class="email"
+        maxlength="35"
+      />
+      <input
+        @click="attendButtonClicked()"
+        type="submit"
+        value="Attend Event"
+        class="attendButton"
+      />
     </form>
 
     <div class="message" v-if="submitted">
-      Du är nu anmäld till Eventet {{ username }}!
+      Du är nu anmäld till eventet {{ username }}!
     </div>
   </div>
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   data() {
     return {
@@ -25,6 +41,14 @@ export default {
     handleSubmit() {
       this.submitted = true;
     },
+    attendButtonClicked() {
+      this.addEvent(this.event);
+      this.$router.push("/myEvents");
+    },
+    ...mapActions(["addEvent"]),
+  },
+  created() {
+    this.event = this.$store.getters.event(this.$route.params.id);
   },
 };
 </script>
@@ -45,11 +69,11 @@ h5 {
   margin: 26px 0px 20px 0px;
 }
 
-.submitButton {
+.attendButton {
   background-color: #65b2b7;
   color: white;
   border: none;
   padding: 10px 20px 10px 20px;
-  margin-bottom: 20px;
+  margin-bottom: 100%;
 }
 </style>

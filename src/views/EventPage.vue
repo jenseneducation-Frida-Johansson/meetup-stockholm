@@ -6,7 +6,7 @@
 
     <h4 class="infoHead">Details about Event</h4>
     <p class="info">{{ event.info }}</p>
-    <AttendForm />
+    <AttendForm :event="event" />
 
     <Nav />
   </div>
@@ -27,7 +27,7 @@ export default {
 };
 </script>
 
-<style >
+<style>
 .image {
   width: 100%;
 }

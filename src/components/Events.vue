@@ -1,6 +1,5 @@
 <template>
   <div class="events">
-    <div class="event-text">Upcoming events:</div>
     <div class="eventsContainer">
       <EventId
         @click.native="$router.push('/eventPage/' + event.id)"
@@ -10,6 +9,7 @@
         :date="event.date"
         :time="event.time"
         :name="event.name"
+        class="EventId"
       />
     </div>
   </div>
@@ -34,13 +34,19 @@ export default {
   grid-gap: 15px;
   margin: 10px;
 }
+/* @media screen and (min-width: 700px) {
+  .eventsContainer {
+    grid-template-columns: auto auto auto;
+  }
+}
 
-.EventId:hover {
-  background-color: grey;
-}
-.event-text {
-  color: white;
-  font-size: 18px;
-  text-shadow: 1px 1px 3px grey;
-}
+@media screen and (min-width: 1050px) {
+  .EventId:hover {
+    background-color: rgb(161, 161, 161);
+    color: white;
+  }
+  .eventsContainer {
+    grid-template-columns: auto auto auto auto;
+  }
+} */
 </style>

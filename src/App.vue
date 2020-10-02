@@ -7,7 +7,6 @@
   </div>
 </template>
 
-
 <style scoped>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

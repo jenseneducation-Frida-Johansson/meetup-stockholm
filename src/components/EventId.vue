@@ -22,12 +22,12 @@ export default {
 
 <style>
 .eventId-container {
-  width: 110px;
-  height: 110px;
+  width: 115px;
+  height: 115px;
   background-color: #fff;
   padding: 20px;
   border-radius: 50%;
-  margin-left: 5px;
+
   color: grey;
 }
 
@@ -35,4 +35,16 @@ export default {
 .time {
   color: orange;
 }
+/* @media screen and (min-width: 600px) {
+  .eventId-container {
+    width: 130px;
+    height: 130px;
+  }
+}
+@media screen and (min-width: 800px) {
+  .eventId-container {
+    width: 150px;
+    height: 150px;
+  }
+} */
 </style>
