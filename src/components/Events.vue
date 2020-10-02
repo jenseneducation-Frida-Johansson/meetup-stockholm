@@ -38,6 +38,10 @@ export default {
   .eventsContainer {
     grid-template-columns: auto auto auto;
   }
+  .EventId {
+    margin: 20px;
+    padding: 20px;
+  }
 }
 
 @media screen and (min-width: 1050px) {
@@ -47,6 +51,10 @@ export default {
   }
   .eventsContainer {
     grid-template-columns: auto auto auto auto;
+  }
+  .EventId {
+    margin: 30px;
+    padding: 30px;
   }
 }
 </style>

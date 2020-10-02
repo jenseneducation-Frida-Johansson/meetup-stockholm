@@ -37,31 +37,54 @@ export default {
   background-repeat: no-repeat;
   background-size: 200%;
   background-position: center top;
+  margin-top: -70px;
+  padding-top: 100px;
 }
 .event-text {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
   text-shadow: 1px 1px 3px grey;
+  margin-top: 10px;
 }
 .Events {
-  margin-top: 110px;
+  margin-top: 20px;
   padding-bottom: 100%;
-}
-/* .Events {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 50px;
-  padding-bottom: 100%;
-} */
-@media screen and (min-width: 400px) {
+  flex-direction: column;
+}
+
+@media screen and (max-width: 350px) {
   .image {
-    background-size: 150%;
+    background-size: 250%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .image {
+    background-size: 200%;
+  }
+  .Events {
+    margin-top: 40px;
+    padding-bottom: 70%;
+  }
+  .event-text {
+    margin-top: 40px;
+    font-size: 25px;
   }
 }
 @media screen and (min-width: 800px) {
   .image {
-    background-size: 100%;
+    background-size: 150%;
+  }
+  .Events {
+    margin-top: 60px;
+    padding-bottom: 50%;
+  }
+  .event-text {
+    margin-top: 60px;
+    font-size: 25px;
   }
 }
 </style>

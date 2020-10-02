@@ -22,10 +22,12 @@
   font-size: 30px;
   color: orange;
   text-decoration: none;
-  text-shadow: 1px 1px 4px rgb(185, 185, 185);
-  position: fixed;
+  text-shadow: 1px 1px 4px rgb(214, 214, 214);
   top: 0;
+  position: fixed;
   display: flex;
-  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 </style>
