@@ -1,7 +1,5 @@
 import Vue from "vue";
 import Vuex from "vuex";
-// import axios from "axios";
-// import router from "@/router/index.js";
 
 Vue.use(Vuex);
 
@@ -62,6 +60,17 @@ export default new Vuex.Store({
   mutations: {
     addEvent(state, data) {
       state.myAttendedEvents.push(data);
+      localStorage.setItem(
+        "myAttandedEvents",
+        JSON.stringify(state.myAttendedEvents)
+      );
+    },
+    initialiseStore(state) {
+      if (localStorage.getItem("myAttandedEvents")) {
+        state.myAttendedEvents = JSON.parse(
+          localStorage.getItem("myAttandedEvents")
+        );
+      }
     },
   },
   actions: {

@@ -34,7 +34,7 @@ export default {
   grid-gap: 15px;
   margin: 10px;
 }
-/* @media screen and (min-width: 700px) {
+@media screen and (min-width: 700px) {
   .eventsContainer {
     grid-template-columns: auto auto auto;
   }
@@ -48,5 +48,5 @@ export default {
   .eventsContainer {
     grid-template-columns: auto auto auto auto;
   }
-} */
+}
 </style>

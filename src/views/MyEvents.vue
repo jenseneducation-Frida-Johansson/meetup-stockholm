@@ -21,13 +21,6 @@
 import EventId from "@/components/EventId.vue";
 import { mapGetters } from "vuex";
 export default {
-  // data() {
-  //   return {
-  //     name: "",
-  //     date: "",
-  //     time: "",
-  //   };
-  // },
   components: {
     EventId,
   },

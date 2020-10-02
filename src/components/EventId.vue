@@ -35,7 +35,7 @@ export default {
 .time {
   color: orange;
 }
-/* @media screen and (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .eventId-container {
     width: 130px;
     height: 130px;
@@ -46,5 +46,5 @@ export default {
     width: 150px;
     height: 150px;
   }
-} */
+}
 </style>

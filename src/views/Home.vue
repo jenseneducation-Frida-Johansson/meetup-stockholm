@@ -54,7 +54,7 @@ export default {
   margin: 50px;
   padding-bottom: 100%;
 } */
-/* @media screen and (min-width: 400px) {
+@media screen and (min-width: 400px) {
   .image {
     background-size: 150%;
   }
@@ -63,5 +63,5 @@ export default {
   .image {
     background-size: 100%;
   }
-} */
+}
 </style>

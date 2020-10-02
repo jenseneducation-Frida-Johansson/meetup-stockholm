@@ -21,9 +21,9 @@
       />
     </form>
 
-    <div class="message" v-if="submitted">
+    <!-- <div class="message" v-if="submitted">
       Du är nu anmäld till eventet {{ username }}!
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
     return {
       username: "",
       email: "",
-      submitted: false,
+      // submitted: false,
     };
   },
   methods: {
