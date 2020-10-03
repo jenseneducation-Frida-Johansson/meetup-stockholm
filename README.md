@@ -27,3 +27,13 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Build image local
+docker build -t registry.heroku.com/
+
+### Push image 
+docker push registry.heroku.com/
+
+### deploy image
+heroku container:release --app 
