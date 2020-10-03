@@ -31,14 +31,14 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Build image local
 ```
-docker build -t registry.heroku.com/
+docker build -t registry.heroku.com/meetup-stockholm/web
 ```
 ### Push image 
 ```
-docker push registry.heroku.com/
+docker push registry.heroku.com/meetup-stockholm/web
 ```
 
 ### deploy image
 ```
-heroku container:release --app 
+heroku container:release --app meetup-stockholm web
 ```
